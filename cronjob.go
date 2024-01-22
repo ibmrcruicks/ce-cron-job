@@ -23,7 +23,7 @@ func main() {
 	// URL to the App
 	url := "http://j2a-fun." + string(namespace) + ".function.cluster.local"
 	
-	fmt.Printf("Sending %d requests...to %url \n", count)
+	fmt.Printf("Sending %d requests...to %s \n", count,url)
 	wg := sync.WaitGroup{}
 
 	// Do all requests to the App in parallel - why not?

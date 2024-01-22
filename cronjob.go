@@ -33,7 +33,8 @@ func main() {
 		go func(i int) {
 			defer wg.Done()
 			for j := 0; j < 10; j++ {
-				res, err := http.Post(url, "", nil)
+				dataurl = url + "?call=" + i
+				res, err := http.Post(dataurl, "", nil)
 
 				if err == nil && res.StatusCode/100 == 2 {
 					break

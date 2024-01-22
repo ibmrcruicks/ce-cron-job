@@ -19,7 +19,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	count := 2
+	count := 1
 
 	// URL to the App
 	//url := "http://j2a-fun."  + string(namespace) + ".function.cluster.local/"

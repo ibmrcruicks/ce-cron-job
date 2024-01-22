@@ -21,7 +21,7 @@ func main() {
 	count := 2
 
 	// URL to the App
-	url := "http://j2a-fun." + string(namespace) + ".svc.cluster.local"
+	url := "http://j2a-fun." + string(namespace) + ".function.cluster.local"
 	
 	fmt.Printf("Sending %d requests...to %url \n", count)
 	wg := sync.WaitGroup{}

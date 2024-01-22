@@ -21,8 +21,8 @@ func main() {
 	count := 2
 
 	// URL to the App
-	//url := "http://j2a-fun."  + string(namespace) + ".function.cluster.local:8080/"
-	url := "https://j2a-fun." + string(namespace) + ".us-south.codeengine.appdomain.cloud/"
+	url := "http://j2a-fun."  + string(namespace) + ".function.cluster.local/"
+	//url := "https://j2a-fun." + string(namespace) + ".us-south.codeengine.appdomain.cloud/"
 	
 	fmt.Printf("Sending %d requests...to %s \n", count,url)
 	wg := sync.WaitGroup{}

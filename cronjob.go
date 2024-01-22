@@ -22,7 +22,7 @@ func main() {
 
 	// URL to the App
 	//url := "http://j2a-fun."  + string(namespace) + ".function.cluster.local/"
-	url := "https://j2a-fun." + string(namespace) + ".private.us-south.codeengine.appdomain.cloud/"
+	url := "https://j2a-fun." + string(namespace) + ".private.us-south.codeengine.appdomain.cloud"
 	
 	fmt.Printf("Sending %d requests...to %s \n", count,url)
 	wg := sync.WaitGroup{}
@@ -33,7 +33,7 @@ func main() {
 		go func(i int) {
 			defer wg.Done()
 			for j := 0; j < 10; j++ {
-				dataurl = url + "?call=" + i
+				dataurl := url + "?call=" + i
 				res, err := http.Post(dataurl, "", nil)
 
 				if err == nil && res.StatusCode/100 == 2 {

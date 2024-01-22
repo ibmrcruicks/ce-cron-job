@@ -7,6 +7,7 @@ import (
 	"os"
 	"sync"
 	"time"
+	"strconv"
 )
 
 func main() {
@@ -33,7 +34,7 @@ func main() {
 		go func(i int) {
 			defer wg.Done()
 			for j := 0; j < 10; j++ {
-				dataurl := url + "?call=" + i
+				dataurl := url + "?call=" + strconv.Itoa(i)
 				res, err := http.Get(dataurl, "", nil)
 
 				if err == nil && res.StatusCode/100 == 2 {

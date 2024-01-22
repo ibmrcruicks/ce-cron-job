@@ -34,7 +34,7 @@ func main() {
 			defer wg.Done()
 			for j := 0; j < 10; j++ {
 				dataurl := url + "?call=" + i
-				res, err := http.Post(dataurl, "", nil)
+				res, err := http.Get(dataurl, "", nil)
 
 				if err == nil && res.StatusCode/100 == 2 {
 					break

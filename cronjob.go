@@ -35,7 +35,8 @@ func main() {
 			defer wg.Done()
 			for j := 0; j < 10; j++ {
 				dataurl := url + "?call=" + strconv.Itoa(i)
-				res, err := http.Get(dataurl, "", nil)
+				//res, err := http.Post(dataurl, "", nil)
+				res, err := http.Get(dataurl)
 
 				if err == nil && res.StatusCode/100 == 2 {
 					break
